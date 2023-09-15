@@ -27,7 +27,11 @@ SECRET_KEY = 'django-insecure-)ywcin=@$o$q9#yvgx1chw4ega5wn40=5000m16vt_gqqa(1n7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['localhost', 'https://stage-two-pkha.onrender.com']
+=======
+ALLOWED_HOSTS = ['https://stage-two-pkha.onrender.com']
+>>>>>>> 29501dabf71d1992f58b314e031f8ff5af0c4cc6
 
 
 # Application definition
