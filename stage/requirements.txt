@@ -16,7 +16,6 @@ six
 sqlparse
 typing_extensions
 urllib3
-=======
 asgiref==3.7.2
 bson==0.5.10
 certifi==2023.7.22
