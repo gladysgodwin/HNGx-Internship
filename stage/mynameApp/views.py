@@ -25,7 +25,7 @@ def person_list(request, format=None):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-        return Response({"Failed": True}, status=status.HTTP_400_BAD_REQUEST)
+        return(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET','PUT', 'DELETE'])
 def person_detail(request, id, format=None):
