@@ -22,13 +22,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)ywcin=@$o$q9#yvgx1chw4ega5wn40=5000m16vt_gqqa(1n7'
-
+SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['https://stage-two-pkha.onrender.com']
+=======
+>>>>>>> 759152d518ee218fa6cc936bd2a9f765f8b8d7ad
 
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 # Application definition
 
@@ -84,9 +87,12 @@ DATABASES = {
     }
 }
 
+database_url = os.environ.get("DATABASE_URL")
+DATABASES["default"] = dj_database_url.parse(database_url)
+
 #database_url = postgres://mynameappp_db_user:eqpGYTols0ihzzNs3bzNr50hKy44ce5G@dpg-ck29eo821fec73d7v7m0-a.oregon-postgres.render.com/mynameappp_db
 #os.environ.get("DATABASE_URL")
-DATABASES["default"] = dj_database_url.parse('postgres://mynameappp_db_user:eqpGYTols0ihzzNs3bzNr50hKy44ce5G@dpg-ck29eo821fec73d7v7m0-a/mynameappp_db')
+#DATABASES["default"] = dj_database_url.parse('postgres://mynameappp_db_user:eqpGYTols0ihzzNs3bzNr50hKy44ce5G@dpg-ck29eo821fec73d7v7m0-a/mynameappp_db')
 
 
 # Password validation

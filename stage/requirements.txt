@@ -16,3 +16,4 @@ six
 sqlparse
 typing_extensions
 urllib3
+django-environ
