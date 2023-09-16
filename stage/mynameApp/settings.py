@@ -26,11 +26,6 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['https://stage-two-pkha.onrender.com']
-=======
->>>>>>> 759152d518ee218fa6cc936bd2a9f765f8b8d7ad
-
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 # Application definition
